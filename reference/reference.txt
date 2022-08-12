@@ -1,0 +1,8 @@
+﻿Calo, E., and J. Wysocka. 2013. Modification of enhancer chromatin: what, how, and why? Mol Cell. 49:825-837.
+Creyghton, M.P., A.W. Cheng, G.G. Welstead, T. Kooistra, B.W. Carey, E.J. Steine, J. Hanna, M.A. Lodato, G.M. Frampton, P.A. Sharp, L.A. Boyer, R.A. Young, and R. Jaenisch. 2010. Histone H3K27ac separates active from poised enhancers and predicts developmental state. Proc Natl Acad Sci U S A. 107:21931-21936.
+Dixon, J.R., S. Selvaraj, F. Yue, A. Kim, Y. Li, Y. Shen, M. Hu, J.S. Liu, and B. Ren. 2012. Topological domains in mammalian genomes identified by analysis of chromatin interactions. Nature. 485:376-380.
+Ernst, J., and M. Kellis. 2012. ChromHMM: automating chromatin-state discovery and characterization. Nat Methods. 9:215-216.
+Ron, G., Y. Globerson, D. Moran, and T. Kaplan. 2017. Promoter-enhancer interactions identified from Hi-C data using probabilistic models and hierarchical topological domains. Nat Commun. 8:2237.
+Schmidl, C., A.F. Rendeiro, N.C. Sheffield, and C. Bock. 2015. ChIPmentation: fast, robust, low-input ChIP-seq for histones and transcription factors. Nat Methods. 12:963-965.
+Sims, R.J., 3rd, and D. Reinberg. 2009. Processing the H3K36me3 signature. Nat Genet. 41:270-271.
+Visel, A., S. Minovitsky, I. Dubchak, and L.A. Pennacchio. 2007. VISTA Enhancer Browser--a database of tissue-specific human enhancers. Nucleic Acids Res. 35:D88-92.

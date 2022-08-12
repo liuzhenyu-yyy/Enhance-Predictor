@@ -1,0 +1,68 @@
+#######################
+#基于SVM的Enhancer预测器
+#作者：刘振宇
+########################
+
+项目结构：
+1. 数据下载（文件夹data）
+2. 处理数据集，计算特征值，拆分训练集与测试集（文件夹DataPreparation）
+3. 随机森林进行特征选择（文件夹FeatureSelection）
+4. 模型训练与参数调节 （文件夹ModelTraining）
+5. 使用模型进行预测，效果评估（文件夹Performance）
+6. 整合代码，形成在命令行下化直接一次调用实现预测的程序（EnhancerPredictor.R）
+
+具体文件：
+1. data/ 目录下：
+	H1_BroadHistone/：H1细胞系的ChIP-Seq数据
+	K562_ATAC-Seq/：K562细胞系的ATAC-Seq数据
+	K562_BroadHistone/：K562细胞系的ChIP-Seq数据
+	ChromHMM.H1.bed：H1细胞系的ChromHMM注释
+	ChromHMM.K562.bed：K562细胞系的ChromHMM注释
+	hg19.genome.size：hg19参考基因组大小，用于产生随机片段
+	VistaEnhancer.bed：Vista Genome Browser收录的hg19基因组下的人的enhancer
+
+2. DataPreparation/ 目录下：
+	DataSets_AllFeature/：计算完所有特征之后的数据集
+	ChromosomeDistrubution.pdf/：阳性集合与阴性集合的基因组分布比较
+	Width.pdf：阳性集合与阴性集合的片段宽度分布
+	exclude.bed：随机生成阴性集合时的黑名单，包括TSS附近区域和阳性enhancer
+	FalseEnhancer.bed：阴性基因组区域
+	TrueEnhancer.bed：阳性基因组区域
+	.RData：工作映像空间
+	DataSets_AllFeature.Rdata：这一步的输出结果，即计算所有特征后的数据集
+	DataPreparation.R：代码实现
+
+3. FeatureSelection/ 目录下：
+	DataSets_SelectedFeature/：包含筛选后特征的数据集
+	.RData：工作映像空间
+	DataSets_SelectedFeature.Rdata：这一步的输出，即筛选后特征的数据集
+	FeatureSelection.pdf：特征筛选的示意图
+	FeatureSelection.R：代码实现
+
+4. ModelTraining/ 目录下：
+	.RData：工作映像空间
+	model1.RData：这一步的输出，训练后的模型
+	ModelTraining.R：代码实现
+	TrainSet_Prediction.tab：测试集的输出结果
+
+5. Performance/ 目录下：
+	.RData：工作映像空间
+	ChromHMM.Enh.H1.bed：H1细胞系的enhancer区域
+	FalseEnhancer.H1.bed：随机产生的H1细胞系的阴性区域
+	H1.FalseNegative.bed：H1预测产生的假阴性区域
+	H1.prediction.tab：对H1的预测结果
+	K562.Chr22.prediction.tab：对K562细胞系22号染色体的预测结果！！！！！（要求的结果）
+	ModelPerformance.RData：这一步的输出，即对K562 chr22和H1的预测结果
+	Performance.R: 代码实现
+
+6. EnhancerPredictor.R:
+    整合后的完整程序，在命令行下调用，直接读入待预测bed文件，输出特征值计算结果和预测结果
+    调用方法：
+    Rscript EnhancerPredictor.R imput.bed output.file
+
+7. Config.RData：
+    EnhancerPredictor.R 配置数据文件，储存有选择后的参数，训练后的模型等中间结果。
+
+8. test1.txt：
+    EnhancerPredictor.R的输出结果样例，产生方法见项目报告
+
