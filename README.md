@@ -1,8 +1,8 @@
 # Enhance Predictor
  An SVM-based classifier to predict genome enhancers based on ChIP-Seq and ATAC-Seq signals.
- 
+
 ## Description
- This is my final project in "Methods in Bioinformatics" Course of [Prof. Ge Gao](https://icg.pku.edu.cn/en/research/faculty/269362.htm) in the spring semaster of 2020. Here I designed a novel classifier to predict genome enhancers. The imput features include chromatin modification and related enzymes, transcription factor binding and chromatin accessibility. Features were selected using random forest and classifier was designed with supporting vector machine (SVM). A 10-fold cross validation was performed for parameter tuning under several different regression methods and sigmoid functions. The final model acquires a precision of 0.9886 and a recall of 0.9931 on K562 cell lines, with the $F_1$ score being 0.9908.
+ This is my final project in "Methods in Bioinformatics" Course of [Prof. Ge Gao](https://icg.pku.edu.cn/en/research/faculty/269362.htm) in the autumn semaster of 2019. Here I designed a novel classifier to predict genome enhancers. The imput features include chromatin modification and related enzymes, transcription factor binding and chromatin accessibility. Features were selected using random forest and classifier was designed with supporting vector machine (SVM). A 10-fold cross validation was performed for parameter tuning under several different regression methods and sigmoid functions. The final model acquires a precision of 0.9886 and a recall of 0.9931 on K562 cell lines, with the $F_1$ score being 0.9908.
 
 <img align="center" src="https://raw.githubusercontent.com/liuzhenyu-yyy/Enhance-Predictor/main/assets/model.png" width=900//>
 
